@@ -1,0 +1,54 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  font-size: 24px;
+  color: #333;
+  margin-top: 20px;
+  display: block;
+}
+
+b {
+  font-size: 20px;
+  color: #1e3d59;
+  margin-top: 10px;
+  display: block;
+}
+
+form {
+  display: inline-block;
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  vertical-align: top;
+  width: 300px; /* Set a fixed width for consistency */
+}
+
+input[type="text"] {
+  width: calc(100% - 20px); /* Adjust the width calculation */
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #5cb85c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #4cae4c;
+}

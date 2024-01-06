@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        strong {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 6px;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <strong>Hello! You can try out various queries below based on the entertainment industry. We have some default input values, but feel free to change it around according to your choice.</strong>
+
+    <div class="grid-container">
+
+        <!-- Form 1 -->
+        <div class="card">
+            <b>GetMovieDetails</b>
+            Provides detailed information about a movie based on its title
+            <form action="GetMovieDetails.php" method="post">
+                Enter a Movie Title: <input type="text" name="m_title" value="Spiderhead"><br>
+                <input type="Submit">
+            </form>
+        </div>
+
+        <!-- Form 2 -->
+        <div class="card">
+            <b>SpecificMovieRecommendation</b>
+            Offers recommendations for movies within a specific genre and year. 
+            <form action="SpecificMovieRecommendation.php" method="post">
+                Choose a year: <input type="number" min="1900" max="2099" step="1" value="2022" name="year" /><br />
+                <label for="genre">Choose a genre:</label>
+        <select name="genre" id="genre">
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Animation">Animation</option>
+            <option value="Biography">Biography</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Crime">Crime</option>
+            <option value="Documentary">Documentary</option>
+            <option value="Drama">Drama</option>
+            <option value="Family">Family</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="History">History</option>
+            <option value="Horror">Horror</option>
+            <option value="Music">Music</option>
+            <option value="Musical">Musical</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Romance">Romance</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Sport">Sport</option>
+            <option value="Thriller">Thriller</option>
+            <option value="War">War</option>
+            <option value="Western">Western</option>
+        </select>
+                <input type="Submit">
+            </form>
+        </div>
+
+        <!-- Form 3 -->
+        <div class="card">
+            <b>SpecificShowRecommendation</b>
+            Gives TV show recommendations in a chosen genre for a specified year.
+            <form action="SpecificShowRecommendation.php" method="post">
+                Choose a year: <input type="number" min="1900" max="2099" step="1" value="2022" name="year" /><br />
+               <label for="genre">Choose a genre:</label>
+   <select name="genre" id="genre">
+   <option value="Action">Action</option>
+   <option value="Adventure">Adventure</option>
+   <option value="Animation">Animation</option>
+   <option value="Biography">Biography</option>
+   <option value="Comedy">Comedy</option>
+   <option value="Crime">Crime</option>
+   <option value="Documentary">Documentary</option>
+   <option value="Drama">Drama</option>
+   <option value="Family">Family</option>
+   <option value="Fantasy">Fantasy</option>
+   <option value="History">History</option>
+   <option value="Horror">Horror</option>
+   <option value="Music">Music</option>
+   <option value="Musical">Musical</option>
+   <option value="Mystery">Mystery</option>
+   <option value="Romance">Romance</option>
+   <option value="Sci-Fi">Sci-Fi</option>
+   <option value="Sport">Sport</option>
+   <option value="Thriller">Thriller</option>
+   <option value="War">War</option>
+   <option value="Western">Western</option>
+   </select>
+                <input type="Submit">
+            </form>
+        </div>
+
+      <!-- Form 4 -->
+<div class="card">
+    <b>MediaAverageRatings</b>
+    Retrieves average ratings of all media for a chosen year. 
+    <form action="MediaAverageRatings.php" method="post">
+        Choose a year: <input type="number" min="1900" max="2099" step="1" value="2022" name="year" /><br />
+        <input type="Submit">
+    </form>
+</div>
+
+<!-- Form 5 -->
+<div class="card">
+    <b>GenericMovieRecommendation</b>
+    Provides recommendations for movies released in a specified year. 
+    <form action="GenericMovieRecommendation.php" method="post">
+        Choose a year: <input type="number" min="1900" max="2099" step="1" value="2022" name="year" /><br />
+        <input type="Submit">
+    </form>
+</div>
+
+<!-- Form 6 -->
+<div class="card">
+    <b>GenericShowRecommendation</b>
+    Suggests TV shows from a selected year.
+    <form action="GenericShowRecommendation.php" method="post">
+        Choose a year: <input type="number" min="1900" max="2099" step="1" value="2022" name="year" /><br />
+        <input type="Submit">
+    </form>
+</div>
+
+<!-- Form 7 -->
+<div class="card">
+    <b>GetTopGenresByYear</b>
+    Determines the most popular genres for a specific year.
+    <form action="GetTopGenresByYear.php" method="post">
+        Choose a year: <input type="number" min="1900" max="2099" step="1" value="2022" name="year" /><br />
+        <input type="Submit">
+    </form>
+</div>
+
+<!-- Form 8 -->
+<div class="card">
+    <b>GetTopRatedShowsByMaxEpisodeCount</b>
+    Finds top-rated shows with a maximum episode count limit. 
+    <form action="GetTopRatedShowsByMaxEpisodeCount.php" method="post">
+        Choose a maximum episode count: <input type="number" min="1" max="3000" step="1" value="10" name="max_episode_count" /><br />
+        <input type="Submit">
+    </form>
+</div>
+
+<!-- Form 9 -->
+<div class="card">
+    <b>GetTopShowsByEpisodeCountInYear</b>
+    Identifies shows based on their episode count in a specified year. 
+    <form action="GetTopShowsByEpisodeCountInYear.php" method="post">
+        Choose a year: <input type="number" min="1900" max="2099" step="1" value="2022" name="year" /><br />
+        <input type="Submit">
+    </form>
+</div>
+
+<!-- Form 10 -->
+<div class="card">
+    <b>GameScoresPerGenre</b>
+    Retrieves game scores for a specific genre from the chosen year. 
+    <form action="GameScoresPerGenre.php" method="post">
+        Choose a year: <input type="number" min="1900" max="2099" step="1" value="2018" name="year" /><br />
+        <label for="genre">Choose a genre:</label>
+   <select name="genre" id="genre">
+   <option value="Action">Action</option>
+   <option value="Action-Adventure">Action-Adventure</option>
+   <option value="Adventure">Adventure</option>
+   <option value="Board Game">Board Game</option>
+   <option value="Education">Education</option>
+   <option value="Fighting">Fighting</option>
+   <option value="Misc">Misc</option>
+   <option value="MMO">MMO</option>
+   <option value="Music">Music</option>
+   <option value="Party">Party</option>
+   <option value="Platform">Platform</option>
+   <option value="Puzzle">Puzzle</option>
+   <option value="Racing">Racing</option>
+   <option value="Role-Playing">Role-Playing</option>
+   <option value="Sandbox">Sandbox</option>
+   <option value="Shooter">Shooter</option>
+   <option value="Simulation">Simulation</option>
+   <option value="Sports">Sports</option>
+   <option value="Strategy">Strategy</option>
+   <option value="Visual Novel">Visual Novel</option>
+   </select>
+        <input type="Submit">
+    </form>
+</div>
+
+<!-- Form 11 -->
+<div class="card">
+    <b>GetGamesByPlatformVGScore</b>
+    Lists games for a given platform that meet or exceed a specified VGChartz score. 
+    <form action="GetGamesByPlatformVGScore.php" method="post">
+        Enter a Platform: <input type="text" name="platform" value="PS2"><br>
+        Enter a minimum VGChartz score: <input type="text" name="VG_score" value="7.5"><br>
+        <input type="Submit">
+    </form>
+</div>
+
+<!-- Form 12 -->
+<div class="card">
+    <b>GetTotalSalesPublisherReleaseForGame</b>
+    Provides total sales data, publisher information, and release details for a specified game on a chosen platform.
+    <form action="GetTotalSalesPublisherReleaseForGame.php" method="post">
+        Enter a game: <input type="text" name="game" value="Grand Theft Auto: Vice City"><br>
+        Enter a platform: <input type="text" name="platform" value="PS2"><br>
+        <input type="Submit">
+    </form>
+</div>
+
+<!-- Form 13 -->
+<div class="card">
+    <b>TopGamesByUserScoreForPublisher</b>
+    Retrieve top games by user score for a specific publisher.
+    <form action="TopGamesByUserScoreForPublisher.php" method="post">
+        Enter a publisher: <input type="text" name="publisher" value="Rockstar Games"><br>
+        <input type="Submit">
+    </form>
+</div>
+
+<!-- Form 14 -->
+<div class="card">
+    <b>GetChannelWatchtimeAndPeakViewers</b>
+    Retrieves watch time and peak viewer statistics for a specified streaming channel.
+    <form action="GetChannelWatchtimeAndPeakViewers.php" method="post">
+        Enter a channel: <input type="text" name="channel" value="Asmongold"><br>
+        <input type="Submit">
+    </form>
+</div>
+
+<!-- Form 15 -->
+<div class="card">
+    <b>TopChannelInLanguage</b>
+    Identifies the top channels for content in a selected language. 
+    <form action="TopChannelInLanguage.php" method="post">
+        <label for="language">Choose a language:</label>
+        <select name="language" id="language">
+            <option value="English">English</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Korean">Korean</option>
+            <option value="Portuguese">Portuguese</option>
+            <option value="Spanish">Spanish</option>
+        </select>
+        <input type="Submit">
+    </form>
+</div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>
