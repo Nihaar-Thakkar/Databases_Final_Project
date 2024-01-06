@@ -1,0 +1,12 @@
+INSERT INTO Months VALUES(1, "January", "Jan");
+INSERT INTO Months VALUES(2, "February", "Feb");
+INSERT INTO Months VALUES(3, "March", "Mar");
+INSERT INTO Months VALUES(4, "April", "Apr");
+INSERT INTO Months VALUES(5, "May", "May");
+INSERT INTO Months VALUES(6, "June", "Jun");
+INSERT INTO Months VALUES(7, "July", "Jul");
+INSERT INTO Months VALUES(8, "August", "Aug");
+INSERT INTO Months VALUES(9, "September", "Sep");
+INSERT INTO Months VALUES(10, "October", "Oct");
+INSERT INTO Months VALUES(11, "November", "Nov");
+INSERT INTO Months VALUES(12, "December", "Dec");
