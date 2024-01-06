@@ -2,8 +2,6 @@
 
 **Visual Media and Entertainment Industry**
 
-The final product can be viewed at https://www.ugrad.cs.jhu.edu/~nthakka7/
-
 Final project done as part of the Databases course at Johns Hopkins University.
 
 Gives unique insights on movies, shows, games, streams based upon the IMDb database for movies and shows, Metacritic and VGChartz database for games, and Twitch database for streaming.
